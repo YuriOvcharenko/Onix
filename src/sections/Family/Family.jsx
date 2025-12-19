@@ -1,4 +1,3 @@
-import './JoinUs.css';
 import Button from '../../components/Button/Button';
 import Input from '../../components/Input/Input'; 
 import BackdropTitle from '../../components/BackdropTitle/BackdropTitle';
