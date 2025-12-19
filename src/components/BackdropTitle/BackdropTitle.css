@@ -1,0 +1,61 @@
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.backdrop-title::before {
+  content: '';
+  position: absolute;
+  right: calc(100% + 15px); 
+  top: 0; 
+  transform: translateY(-10%);
+  width: 26px;
+  height: 26px;
+  background: url('../../assets/icons/plus.svg') center/contain no-repeat;
+  pointer-events: none;
+  display: block !important;
+}
+
+.backdrop-title::after {
+  content: attr(data-title);
+  position: absolute;
+  z-index: -1;
+  top: -0.4em;
+  left: -0.6em;
+  font-family: var(--font-family-accent);
+  font-size: 2.8em; 
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-light-gray);
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.4;
+  transform: none; 
+}
+
+.backdrop-title[data-title="Go!"],
+.backdrop-title[data-title="Part"],
+.backdrop-title[data-title="Look"] {
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.backdrop-title[data-title="Go!"]::after,
+.backdrop-title[data-title="Part"]::after,
+.backdrop-title[data-title="Look"]::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop-title.centered {
+  display: flex;
+  margin-inline: auto;
+  width: fit-content;
+  align-items: center;
+}

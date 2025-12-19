@@ -1,0 +1,103 @@
+.calculate {
+  padding-block: 146px;
+  background-color: var(--color-dark-alternate);
+}
+
+.calculate-inner {
+  display: flex;
+  align-items: center;
+  column-gap: clamp(30px, 8vw, 150px);
+}
+
+.calculate-body {
+  flex-grow: 1;
+  max-width: 627px;
+}
+
+.calculate-form-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+  margin-bottom: 26px;
+}
+
+.calculate-form-body .wide {
+  grid-column: 1 / -1; 
+  width: 100%;
+}
+
+.calculate-table-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 610px;
+  aspect-ratio: 1;
+}
+
+.calculate-table-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.calculate-table {
+  position: relative;
+  z-index: 1;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+.calculate-table :is(td, th) {
+  padding-right: 30px;
+  text-align: left;
+}
+
+.calculate-table :is(td, th):not(:first-child) {
+  padding-left: 30px;
+}
+
+.calculate-table :is(td, th):not(:last-child) {
+  border-right: 1px solid var(--color-dark-gray);
+}
+
+.calculate-table tbody td {
+  border-top: 1px solid var(--color-dark-gray);
+  padding-block: 14px;
+}
+
+.calculate-table tfoot strong {
+  font-weight: bold;
+}
+
+.calculate-table-footer {
+  padding-top: 33px !important;
+  color: var(--color-light-gray);
+  font-size: 14px;
+  border-top: 1px solid var(--color-dark-gray);
+}
+
+.calculate-form-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+  margin-bottom: 26px;
+}
+
+.calculate-form-body:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.calculate-input.wide {
+  grid-column: -1 / 1;
+}
+
+.calculate-form-body .input-wrapper.wide {
+  grid-column: 1 / -1;
+  width: 100%;
+}

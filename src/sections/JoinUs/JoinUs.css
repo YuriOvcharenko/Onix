@@ -1,0 +1,106 @@
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
+
+.join-us-video-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 150px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../../assets/images/join-us-bg.jpg') center/cover no-repeat;
+}
+
+.join-us-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.join-us-video-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.join-us-video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+  color: var(--color-light);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.join-us-video-play-button::after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  background: url('../../assets/icons/arrow-top-right.svg') center/contain no-repeat;
+}
+
+.join-us-title {
+  position: relative;
+  margin-top: -45px; 
+  font-size: clamp(64px, 12vw, 180px);
+  line-height: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-light);
+  font-weight: 700;
+  z-index: 10;
+}
+
+.join-us-title::after {
+  content: '';
+  display: inline-block;
+  width: 0.7em;
+  aspect-ratio: 1;
+  margin-left: 0.1em;
+  background: url('../../assets/icons/bold-arrow-down-right.svg') center/contain no-repeat;
+  transform: scaleY(-1); 
+}
+
+.join-us-form-header {
+  margin-top: 130px;
+  margin-bottom: 52px;
+}
+
+.join-us-form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  padding-bottom: 150px;
+  
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.join-us-form-input {
+  flex: 1;
+  min-width: 400px;
+}
+
+.join-us-form-button.button.transparent {
+  flex: 0 0 auto;
+  width: 200px;
+  padding-right: 60px;
+}
