@@ -1,1 +1,1 @@
-https://yuriovcharenko.github.io/Practice-for-Onix/
+https://yuriovcharenko.github.io/Onix/
