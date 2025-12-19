@@ -1,61 +1,35 @@
-import Button from '../../components/Button/Button';
-import Input from '../../components/Input/Input'; 
-import BackdropTitle from '../../components/BackdropTitle/BackdropTitle';
-import videoPlaceholder from '../../assets/images/video-placeholder.jpg';
+import "./Family.css";
+import BackdropTitle from "../../components/BackdropTitle/BackdropTitle";
+import img1 from "../../assets/images/family/1.jpg";
+import img2 from "../../assets/images/family/2.jpg";
+import img3 from "../../assets/images/family/3.jpg";
+import img4 from "../../assets/images/family/4.jpg";
+import img5 from "../../assets/images/family/5.jpg";
 
-const JoinUs = () => {
+const Family = () => {
   return (
-    <section className="join-us">
-      <div className="join-us-video-wrapper">
-        <div className="join-us-video-container">
-          <img 
-            className="join-us-video-poster" 
-            src={videoPlaceholder} 
-            alt="Motivation" 
-          />
-          <button className="join-us-video-play-button" type="button">
-            Play
-          </button>
+    <section className="family">
+      <header className="family-header container">
+        <BackdropTitle dataTitle="Part" className="title-big centered">
+          Be a part of our fit family
+        </BackdropTitle>
+        <div className="family-description section-description">
+          <p>Training helps you think and feel better. join us!</p>
         </div>
-      </div>
-
-      <div className="join-us-body container">
-        <h2 className="join-us-title">Join us</h2>
-        
-        <form className="join-us-form">
-          <header className="join-us-form-header">
-            <BackdropTitle dataTitle="Go!" centered className="title-big">
-              Start here
-            </BackdropTitle>
-            <div className="join-us-form-subtitle section-description">
-              fill the form below to start your journey
-            </div>
-          </header>
-
-          <div className="join-us-form-body">
-            <Input 
-              className="join-us-form-input" 
-              id="name" 
-              placeholder="Name" 
-            />
-            <Input 
-              className="join-us-form-input" 
-              id="email" 
-              placeholder="Email" 
-              type="email" 
-            />
-            <Button 
-              className="join-us-form-button" 
-              variant="transparent" 
-              type="submit"
-            >
-              Subscribe
-            </Button>
-          </div>
-        </form>
+      </header>
+      <div className="family-body container-wide">
+        {[img1, img2, img3, img4, img5].map((img, index) => (
+          <img 
+            key={index} 
+            className="family-image" 
+            src={img} 
+            alt="Training session" 
+            loading="lazy" 
+          />
+        ))}
       </div>
     </section>
   );
 };
 
-export default JoinUs;
+export default Family;
