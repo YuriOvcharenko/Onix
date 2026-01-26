@@ -1,0 +1,156 @@
+.calculate {
+  padding-block: 146px;
+  background-color: var(--color-dark-alternate);
+  color: var(--color-light);
+}
+
+.calculate-inner {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+
+.calculate-body {
+  flex-grow: 1;
+  max-width: 627px;
+}
+
+.calculate-title {
+  margin-bottom: 16px;
+}
+
+.calculate-description {
+  max-width: 385px;
+  margin-bottom: 30px;
+  color: var(--color-light-gray);
+}
+
+.calculate-form-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 30px;
+  margin-bottom: 26px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.calculate-button {
+  width: 100%;
+  max-width: 250px;
+}
+
+.calculate-table-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 610px;
+}
+
+.calculate-table-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.calculate-table {
+  position: relative;
+  border-collapse: collapse;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+}
+
+.calculate-table :is(td, th) {
+  padding-right: 30px;
+}
+
+.calculate-table :is(td, th):not(:first-child) {
+  padding-left: 30px;
+}
+
+.calculate-table :is(td, th):not(:last-child) {
+  border-right: 1px solid var(--color-light-gray);
+}
+
+.calculate-table tbody td {
+  border-top: 1px solid var(--color-light-gray);
+  color: var(--color-light-gray);
+}
+
+.calculate-table th {
+  padding-block: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--color-light);
+  font-weight: 700;
+}
+
+.calculate-table td {
+  padding-block: 14px;
+}
+
+.calculate-table tfoot td {
+  padding-top: 33px;
+  padding-bottom: 0;
+  color: var(--color-light-gray);
+  font-size: 14px;
+}
+
+.calculate-table tfoot b {
+  color: var(--color-light);
+}
+
+@media (max-width: 1280px) {
+  .calculate {
+    padding-block: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calculate-inner {
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  .calculate-body {
+    max-width: 100%;
+  }
+
+  .calculate-table-wrapper::before {
+    display: none; 
+  }
+}
+
+@media (max-width: 767px) {
+  .calculate {
+    padding-block: 60px;
+  }
+
+  .calculate-form-body {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .calculate-button {
+    max-width: 100%;
+  }
+
+  .calculate-table :is(td, th) {
+    padding-inline: 15px;
+  }
+  
+  .calculate-table {
+    font-size: 14px;
+  }
+}

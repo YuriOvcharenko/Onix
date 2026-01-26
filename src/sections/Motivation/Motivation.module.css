@@ -1,0 +1,92 @@
+.motivation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.motivation-item:nth-child(even) {
+  background-color: var(--color-dark-alternate);
+}
+
+.motivation-item:nth-child(even) .motivation-card {
+  flex-direction: row-reverse;
+}
+
+.motivation-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: clamp(30px, 10.42vw, 200px);
+}
+
+.motivation-card-image {
+  display: block;
+  height: auto;
+  margin-block: -60px; 
+  position: relative; 
+  z-index: 2; 
+}
+
+.motivation-card-body {
+  flex: 1;
+  padding-left: 35px;
+}
+
+.motivation-item:nth-child(even) .motivation-card-body {
+  padding-left: 0;
+  padding-right: 35px;
+}
+
+.motivation-card-title:not(:last-child) { 
+  margin-bottom: 14px;
+}
+
+.motivation-card-description { 
+  max-width: 400px;
+}
+
+.motivation-card-description:not(:last-child) { 
+  margin-bottom: 37px;
+}
+
+@media (max-width: 1919px) {
+  .motivation-card-image {
+    margin-block: -30px; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .motivation-card {
+    padding-block: 50px;
+  }
+  
+  .motivation-card-image {
+    max-width: 40%; 
+    margin-block: 0; 
+  }
+  
+  .motivation-card-body {
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .motivation-card,
+  .motivation-item:nth-child(even) .motivation-card {
+    flex-direction: column-reverse;
+  }
+  
+  .motivation-card {
+    row-gap: 30px;
+    padding-block: 40px;
+  }
+  
+  .motivation-card-image {
+    max-width: 80%;
+    margin-block: 0;
+  }
+  
+  .motivation-card-description:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

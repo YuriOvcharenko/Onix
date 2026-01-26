@@ -1,0 +1,37 @@
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+  height: 100%; 
+  width: 100%;
+  object-fit: cover;
+  min-height: 400px; 
+}
+
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+  background-color: var(--color-dark); 
+}
+
+@media (max-width: 1024px) {
+  .location {
+    grid-template-columns: 1fr; 
+    display: flex;
+    flex-direction: column-reverse; 
+  }
+  
+  .location-map-image {
+    height: 400px;
+  }
+
+  .location-body {
+    padding: 60px 15px;
+  }
+}
