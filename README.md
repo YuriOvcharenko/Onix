@@ -11,7 +11,7 @@ Kropp Fitness - веб-сайт фітнес-центру
 git clone https://github.com/YuriOvcharenko/Onix.git
 cd Onix
 ```
-3. Встановлення залежностей
+2. Встановлення залежностей
 
 Переконайтеся, що у вас встановлено Node.js. Виконайте команду:
 ```
