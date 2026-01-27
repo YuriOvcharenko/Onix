@@ -2,6 +2,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-block: 60px;
 }
 
 .motivation-item:nth-child(even) {
@@ -22,9 +23,10 @@
 .motivation-card-image {
   display: block;
   height: auto;
-  margin-block: -60px; 
-  position: relative; 
-  z-index: 2; 
+  margin-block: -60px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0; 
 }
 
 .motivation-card-body {
@@ -37,34 +39,46 @@
   padding-right: 35px;
 }
 
-.motivation-card-title:not(:last-child) { 
+.motivation-card-title:not(:last-child) {
   margin-bottom: 14px;
 }
 
-.motivation-card-description { 
+.motivation-card-description {
   max-width: 400px;
 }
 
-.motivation-card-description:not(:last-child) { 
+.motivation-card-description:not(:last-child) {
   margin-bottom: 37px;
+}
+
+.motivation-item:last-child .motivation-card-image {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1919px) {
   .motivation-card-image {
-    margin-block: -30px; 
+    margin-block: -30px;
+  }
+  
+  .motivation-list {
+    padding-block: 30px;
   }
 }
 
 @media (max-width: 1024px) {
+  .motivation-list {
+    padding-block: 0;
+  }
+
   .motivation-card {
     padding-block: 50px;
   }
-  
+
   .motivation-card-image {
-    max-width: 40%; 
-    margin-block: 0; 
+    max-width: 40%;
+    margin-block: 0;
   }
-  
+
   .motivation-card-body {
     padding-inline: 0;
   }
@@ -75,18 +89,53 @@
   .motivation-item:nth-child(even) .motivation-card {
     flex-direction: column-reverse;
   }
-  
+
   .motivation-card {
     row-gap: 30px;
     padding-block: 40px;
   }
-  
+
   .motivation-card-image {
     max-width: 80%;
     margin-block: 0;
   }
-  
+
   .motivation-card-description:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .motivation-list {
+    padding-block: 3.125vw;
+  }
+
+  .motivation-card {
+    column-gap: 10.42vw;
+  }
+
+  .motivation-card-image {
+    width: 27vw;
+    margin-block: -3.125vw;
+  }
+
+  .motivation-card-body {
+    padding-left: 1.82vw;
+  }
+
+  .motivation-item:nth-child(even) .motivation-card-body {
+    padding-right: 1.82vw;
+  }
+
+  .motivation-card-title:not(:last-child) {
+    margin-bottom: 0.73vw;
+  }
+
+  .motivation-card-description {
+    max-width: 20.83vw;
+  }
+
+  .motivation-card-description:not(:last-child) {
+    margin-bottom: 1.93vw;
   }
 }

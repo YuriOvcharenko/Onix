@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: calc(100vh - var(--header-height));
+  min-height: 650px;
   padding: 36px 70px;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
@@ -91,5 +91,25 @@
 
   .banner-title {
     font-size: 18vw; 
+  }
+}
+
+@media (min-width: 1921px) {
+  .banner {
+    padding: 100px 140px;
+    min-height: 60vh;
+  }
+
+  .banner-info {
+    font-size: 40px;
+  }
+
+  .banner-info::before {
+    width: 200px;
+    margin-right: 50px;
+  }
+
+  .banner-title {
+    font-size: min(16vw, 450px);
   }
 }

@@ -154,3 +154,41 @@
     width: 100%; 
   }
 }
+
+@media (min-width: 2000px) {
+  .join-us-video-wrapper {
+    padding-block: 250px;
+  }
+
+  .join-us-video-container {
+    max-width: 1800px;
+  }
+
+  .join-us-video-play-button {
+    width: 300px;
+    height: 300px;
+    font-size: 24px;
+  }
+
+  .join-us-title {
+    font-size: 13vw;
+    margin-top: -5vw;
+    white-space: nowrap;
+  }
+
+  .join-us-form-header {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  .join-us-form-body {
+    max-width: 1600px;
+    column-gap: 50px;
+    padding-bottom: 250px;
+  }
+
+  .join-us-form-button.button.transparent {
+    width: 350px;
+    font-size: 24px;
+  }
+}

@@ -265,3 +265,67 @@
     text-align: center;
   }
 }
+
+@media (min-width: 2000px) {
+  .footer-main {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+
+  .footer-header {
+    margin-bottom: 100px;
+    column-gap: 100px;
+  }
+
+  .footer-body {
+    column-gap: 100px;
+  }
+
+  .footer-column-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .footer-column-title.has-arrow-diagonal::after {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+
+  .footer-about,
+  .footer-schedule,
+  .footer-address,
+  .footer-contacts {
+    font-size: 24px;
+    line-height: 1.8;
+  }
+
+  .footer-subscribe {
+    margin-bottom: 80px;
+  }
+
+  .footer-subscribe-input :global(.global-input-field) {
+    padding-right: 120px;
+  }
+
+  .footer-socials {
+    gap: 40px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-extra {
+    padding-block: 30px;
+  }
+
+  .footer-copyright {
+    font-size: 22px;
+  }
+
+  .footer-author {
+    font-size: 22px;
+  }
+}

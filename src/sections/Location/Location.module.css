@@ -35,3 +35,13 @@
     padding: 60px 15px;
   }
 }
+
+@media (min-width: 2000px) {
+  .location-map-image {
+    min-height: 900px;
+  }
+
+  .location-body {
+    padding: 150px;
+  }
+}

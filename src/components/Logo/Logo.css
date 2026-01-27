@@ -38,3 +38,25 @@
   max-width: 1920px;
   margin-inline: auto;
 }
+
+@media (min-width: 1800px) {
+  .title-medium {
+    font-size: 60px;
+  }
+
+  .title-big {
+    font-size: 100px;
+  }
+
+  .section-description {
+    font-size: 32px;
+  }
+
+  .container {
+    max-width: 2500px;
+  }
+  
+  .container-wide {
+    max-width: 95vw; 
+  }
+}

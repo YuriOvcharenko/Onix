@@ -128,3 +128,29 @@
     display: none; 
   }
 }
+
+@media (min-width: 1921px) {
+  .header {
+    min-height: 120px;
+    padding-inline: 80px;
+    column-gap: 50px;
+  }
+
+  .header-menu-list {
+    column-gap: 80px;
+  }
+
+  .header-menu-link {
+    height: 120px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .header-menu-link.is-current::after {
+    width: 10px;
+  }
+
+  .header-actions {
+    column-gap: 60px;
+  }
+}

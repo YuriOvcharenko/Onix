@@ -15,10 +15,10 @@ import Family from './sections/Family/Family';
 function App() {
   return (
     <div className="app">
-      <ProjectDescription />
       <Header />
       <main className="content">
         <Banner />
+        <ProjectDescription />
         <Motivation />
         <TrainingTypes />
         <JoinUs />

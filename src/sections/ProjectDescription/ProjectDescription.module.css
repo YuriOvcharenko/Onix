@@ -32,3 +32,22 @@
     text-align: left;
   }
 }
+
+@media (min-width: 2000px) {
+  .description {
+    padding-block: 200px;
+  }
+
+  .description-header {
+    margin-bottom: 80px;
+  }
+
+  .description-content {
+    max-width: 1400px;
+    font-size: 32px;
+  }
+
+  .description-content p:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}

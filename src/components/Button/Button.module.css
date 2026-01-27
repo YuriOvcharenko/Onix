@@ -83,3 +83,23 @@
 .button.transparent:hover::after {
   background-color: var(--color-dark);
 }
+
+@media (min-width: 2000px) {
+  .button {
+    height: 60px;
+    padding-inline: 50px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .button.transparent {
+    height: 80px;
+    padding-left: 50px;
+    padding-right: 130px;
+  }
+
+  .button.transparent::after {
+    -webkit-mask-size: 35%;
+    mask-size: 35%;
+  }
+}

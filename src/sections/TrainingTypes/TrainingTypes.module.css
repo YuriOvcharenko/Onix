@@ -73,3 +73,43 @@
     font-size: 14px;
   }
 }
+
+@media (min-width: 1800px) {
+  .training-types {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+
+  .training-types-list {
+    gap: 40px;
+  }
+
+  .training-types-item {
+    position: relative;
+    background: none;
+    min-height: 350px;
+    row-gap: 40px;
+    padding-top: 0;
+  }
+
+  .training-types-item::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: url('../../assets/icons/transparent-arrow-bottom-left.svg') center/contain no-repeat;
+  }
+
+  .training-types-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .training-types-item-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+}
