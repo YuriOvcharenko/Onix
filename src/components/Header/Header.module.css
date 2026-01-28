@@ -68,11 +68,6 @@
   cursor: pointer;
 }
 
-.header-burger-button:hover {
-  color: var(--color-light-gray);
-  border-color: currentColor;
-}
-
 .header-burger-button-line {
   width: 6px;
   height: 1px;
@@ -119,19 +114,10 @@
   }
 }
 
-@media (max-width: 767px) {
-  .header-actions {
-    column-gap: 15px;
-  }
-  
-  .header-book-button {
-    display: none; 
-  }
-}
-
 @media (min-width: 1921px) {
   .header {
-    min-height: 120px;
+    --header-height: 120px;
+    min-height: var(--header-height);
     padding-inline: 80px;
     column-gap: 50px;
   }
@@ -141,7 +127,7 @@
   }
 
   .header-menu-link {
-    height: 120px;
+    height: var(--header-height);
     font-size: 18px;
     letter-spacing: 2px;
   }

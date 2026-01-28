@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 650px;
+  min-height: calc(100vh - var(--header-height));
   padding: 36px 70px;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
@@ -29,7 +29,7 @@
 }
 
 .banner-title {
-  font-size: min(16vw, 360px); 
+  font-size: min(18.75vw, 360px); 
   line-height: 1;
   margin: 0;
   white-space: nowrap; 
@@ -40,6 +40,11 @@
   justify-content: center;
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.banner-pagination-item {
+  display: flex;
 }
 
 .banner-pagination-button {
@@ -65,6 +70,10 @@
   background-color: var(--color-light);
 }
 
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: var(--color-light-gray);
+}
+
 @media (max-width: 1024px) {
   .banner {
     padding: 30px;
@@ -79,14 +88,13 @@
   }
 
   .banner-info {
-    flex-direction: row; 
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .banner-info::before {
     width: 40px;
-    margin-right: 15px;
+    margin-right: 10px;
   }
 
   .banner-title {
@@ -97,7 +105,6 @@
 @media (min-width: 1921px) {
   .banner {
     padding: 100px 140px;
-    min-height: 60vh;
   }
 
   .banner-info {
@@ -110,6 +117,6 @@
   }
 
   .banner-title {
-    font-size: min(16vw, 450px);
+    font-size: min(18.75vw, 450px);
   }
 }
